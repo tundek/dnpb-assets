@@ -900,3 +900,42 @@ img, video, iframe, embed, object {
   text-transform: uppercase;
   font-size: 13px;
 }
+
+
+/* ============================================================
+   22. HERO CHECKLIST ALIGNMENT FIX (Section 01/02)
+   ============================================================ */
+
+.dnpb-section-02 .dnpb-narrow .dnpb-check-list {
+  text-align: left;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dnpb-section-02 .dnpb-narrow .dnpb-check-list li {
+  text-align: left;
+}
+
+
+/* ============================================================
+   23. FOOTER LINKS — Privacy Policy & Terms
+   ============================================================ */
+
+.dnpb-footer-sep {
+  margin: 0 8px;
+  color: #aaaaaa;
+}
+
+.dnpb-footer-link {
+  color: #777777;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: 12px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.dnpb-footer-link:hover {
+  color: #333333;
+}
