@@ -1,0 +1,887 @@
+/* ============================================================
+   DNPB — DATE NIGHT PLEASURE BUNDLE
+   Master Stylesheet
+   
+   HOW TO HOST:
+   1. Upload this file to your GitHub repo
+   2. Reference via jsDelivr CDN:
+      https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@main/dnpb-styles.css
+   3. Replace the <link> placeholder in each HTML file with that URL
+   ============================================================ */
+
+
+/* ============================================================
+   01. FONTS
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Shadows+Into+Light&display=swap');
+
+
+/* ============================================================
+   02. GLOBAL RESET & BASE
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ============================================================
+   03. SHARED SECTION BASE
+   Applied to every .dnpb-section-XX wrapper
+   ============================================================ */
+
+.dnpb-section-01,
+.dnpb-section-02,
+.dnpb-section-03,
+.dnpb-section-04,
+.dnpb-section-05,
+.dnpb-section-06,
+.dnpb-section-07,
+.dnpb-section-08,
+.dnpb-section-09 {
+  width: 100%;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.58;
+}
+
+.dnpb-section-01 *,
+.dnpb-section-02 *,
+.dnpb-section-03 *,
+.dnpb-section-04 *,
+.dnpb-section-05 *,
+.dnpb-section-06 *,
+.dnpb-section-07 *,
+.dnpb-section-08 *,
+.dnpb-section-09 * {
+  box-sizing: border-box;
+}
+
+/* Paragraph spacing */
+.dnpb-section-02 p,
+.dnpb-section-03 p,
+.dnpb-section-04 p,
+.dnpb-section-05 p,
+.dnpb-section-06 p,
+.dnpb-section-07 p,
+.dnpb-section-08 p,
+.dnpb-section-09 p {
+  margin: 0 0 16px;
+}
+
+/* Font family cascade for all inline elements */
+.dnpb-section-01 p, .dnpb-section-01 li, .dnpb-section-01 a, .dnpb-section-01 span, .dnpb-section-01 div,
+.dnpb-section-02 p, .dnpb-section-02 li, .dnpb-section-02 a, .dnpb-section-02 span, .dnpb-section-02 div,
+.dnpb-section-03 p, .dnpb-section-03 li, .dnpb-section-03 a, .dnpb-section-03 span, .dnpb-section-03 div,
+.dnpb-section-04 p, .dnpb-section-04 li, .dnpb-section-04 a, .dnpb-section-04 span, .dnpb-section-04 div,
+.dnpb-section-05 p, .dnpb-section-05 li, .dnpb-section-05 a, .dnpb-section-05 span, .dnpb-section-05 div,
+.dnpb-section-06 p, .dnpb-section-06 li, .dnpb-section-06 a, .dnpb-section-06 span, .dnpb-section-06 div,
+.dnpb-section-07 p, .dnpb-section-07 li, .dnpb-section-07 a, .dnpb-section-07 span, .dnpb-section-07 div,
+.dnpb-section-08 p, .dnpb-section-08 li, .dnpb-section-08 a, .dnpb-section-08 span, .dnpb-section-08 div,
+.dnpb-section-09 p, .dnpb-section-09 li, .dnpb-section-09 a, .dnpb-section-09 span, .dnpb-section-09 div {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+
+/* ============================================================
+   04. SECTION BACKGROUND COLOURS (unique per section)
+   ============================================================ */
+
+.dnpb-section-01 { background: #d00000; color: #ffffff; margin: 0; padding: 0; }
+.dnpb-section-02 { background: #ffffff; color: #202020; }
+.dnpb-section-03 { background: #ffffff; color: #202020; }
+.dnpb-section-04 { background: #ffffff; color: #202020; }
+.dnpb-section-05 { background: #ffffff; color: #202020; }
+.dnpb-section-06 { background: #ffffff; color: #202020; }
+.dnpb-section-07 { background: #f7f7f7; color: #202020; }
+.dnpb-section-08 { background: #203b42; color: #ffffff; }
+.dnpb-section-09 { background: #ffffff; color: #202020; }
+
+
+/* ============================================================
+   05. LAYOUT — WRAP, NARROW, CENTRE, PADDING
+   ============================================================ */
+
+.dnpb-wrap {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dnpb-narrow {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.dnpb-center {
+  text-align: center;
+}
+
+.dnpb-section-pad {
+  padding-top: 54px;
+  padding-bottom: 58px;
+}
+
+
+/* ============================================================
+   06. TYPOGRAPHY — HEADINGS
+   ============================================================ */
+
+/* h1 uses Shadows Into Light (script/handwritten) */
+.dnpb-section-02 h1, .dnpb-section-03 h1, .dnpb-section-04 h1,
+.dnpb-section-05 h1, .dnpb-section-06 h1, .dnpb-section-07 h1,
+.dnpb-section-08 h1, .dnpb-section-09 h1 {
+  font-family: 'Shadows Into Light', cursive !important;
+  font-weight: 400 !important;
+  font-size: 44px;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.22);
+  line-height: 1.12;
+  text-align: center;
+  margin: 0 0 22px;
+  color: #111111;
+}
+
+/* h2 uses Montserrat bold */
+.dnpb-section-02 h2, .dnpb-section-03 h2, .dnpb-section-04 h2,
+.dnpb-section-05 h2, .dnpb-section-06 h2, .dnpb-section-07 h2,
+.dnpb-section-09 h2 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1.12;
+  text-align: center;
+  margin: 0 0 18px;
+  color: #111111;
+}
+
+/* Section 08 has white headings (dark bg) */
+.dnpb-section-08 h1,
+.dnpb-section-08 h2,
+.dnpb-section-08 h3 {
+  color: #ffffff;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+  font-weight: 800;
+  line-height: 1.12;
+  margin: 0;
+}
+.dnpb-section-08 h1 { font-size: 44px; text-align: center; margin-bottom: 22px; }
+.dnpb-section-08 h2 { font-size: 36px; text-align: center; margin-bottom: 18px; }
+.dnpb-section-08 h3 { font-size: 28px; margin-bottom: 10px; }
+
+/* h3 shared */
+.dnpb-section-02 h3, .dnpb-section-03 h3, .dnpb-section-04 h3,
+.dnpb-section-05 h3, .dnpb-section-06 h3, .dnpb-section-07 h3,
+.dnpb-section-09 h3 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.12;
+  color: #111111;
+  margin: 0 0 10px;
+}
+
+/* Red bar headings & product titles always Montserrat 800 */
+.dnpb-red-bar,
+.dnpb-product-title {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   07. KICKER / EYEBROW LABELS
+   ============================================================ */
+
+.dnpb-kicker {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Red kicker on light sections */
+.dnpb-section-02 .dnpb-kicker,
+.dnpb-section-03 .dnpb-kicker,
+.dnpb-section-04 .dnpb-kicker,
+.dnpb-section-05 .dnpb-kicker,
+.dnpb-section-06 .dnpb-kicker,
+.dnpb-section-07 .dnpb-kicker,
+.dnpb-section-09 .dnpb-kicker {
+  color: #d00000;
+}
+
+/* Light kicker on dark section */
+.dnpb-section-08 .dnpb-kicker {
+  color: #ffdddd;
+}
+
+
+/* ============================================================
+   08. LEAD TEXT
+   ============================================================ */
+
+.dnpb-section-02 .dnpb-lead,
+.dnpb-section-03 .dnpb-lead,
+.dnpb-section-04 .dnpb-lead,
+.dnpb-section-05 .dnpb-lead,
+.dnpb-section-06 .dnpb-lead,
+.dnpb-section-07 .dnpb-lead,
+.dnpb-section-09 .dnpb-lead {
+  color: #555555;
+  font-size: 18px;
+}
+
+.dnpb-section-08 .dnpb-lead {
+  color: #d9e2e4;
+  font-size: 18px;
+}
+
+
+/* ============================================================
+   09. UTILITY COLOURS
+   ============================================================ */
+
+.dnpb-red-text { color: #d00000; }
+
+
+/* ============================================================
+   10. RED BAR BANNER
+   ============================================================ */
+
+.dnpb-red-bar {
+  background: #d00000;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 18px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+
+/* ============================================================
+   11. URGENCY BANNER (Section 01 only)
+   ============================================================ */
+
+.dnpb-urgency {
+  width: 100%;
+  background: #d00000;
+  color: #ffffff;
+  text-align: center;
+  padding: 13px 18px;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.dnpb-urgency span {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+
+/* ============================================================
+   12. CTA BUTTONS
+   ============================================================ */
+
+.dnpb-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.dnpb-cta {
+  display: inline-block;
+  width: 100%;
+  max-width: 440px;
+  padding: 16px 30px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #ffb12d 0%, #f36b21 52%, #d84315 100%);
+  border: 1px solid #c93b10;
+  box-shadow: 0 8px 0 #a62b0b, 0 14px 24px rgba(0,0,0,0.18);
+  color: #ffffff !important;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  /* Mobile touch improvements */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: normal;
+  word-wrap: break-word;
+  min-height: 44px;
+  line-height: 1.3;
+}
+
+.dnpb-cta:hover {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+/* Secondary text link CTA */
+.dnpb-secondary-link {
+  display: inline;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #d84315 !important;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.dnpb-secondary-link:hover {
+  color: #a62b0b !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+
+/* ============================================================
+   13. CHECKLIST
+   ============================================================ */
+
+.dnpb-check-list {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.dnpb-check-list li {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  margin: 0 0 12px;
+  color: #202020;
+  font-size: 16px;
+}
+
+.dnpb-check {
+  flex: 0 0 auto;
+  color: #19a64a;
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+
+/* ============================================================
+   14. PROGRAM / MODULE CARDS
+   ============================================================ */
+
+.dnpb-program {
+  display: flex;
+  gap: 34px;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 18px 42px rgba(0,0,0,0.10);
+  margin: 0 0 32px;
+  padding: 30px;
+}
+
+.dnpb-image-placeholder {
+  flex: 0 0 300px;
+  min-height: 186px;
+  background: #f5f5f5;
+  border: 2px dashed #c9c9c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  color: #777777;
+}
+
+.dnpb-image-placeholder strong {
+  display: block;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.dnpb-image-placeholder span {
+  display: block;
+  color: #777777;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dnpb-program-copy {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.dnpb-small-label {
+  color: #d00000;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.dnpb-price {
+  display: inline-block;
+  margin: 4px 0 16px;
+  padding: 5px 12px;
+  border: 1px solid #e5e5e5;
+  color: #555555;
+  background: #fafafa;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dnpb-price s {
+  color: #d00000;
+  font-weight: 900;
+}
+
+
+/* ============================================================
+   15. VIDEO BOX (Section 02)
+   ============================================================ */
+
+.dnpb-video-box {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto 34px;
+  aspect-ratio: 16 / 9;
+  background: #202020;
+  border: 10px solid #f0f0f0;
+  box-shadow: 0 18px 44px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.dnpb-play {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: #d00000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.dnpb-play::before {
+  content: "";
+  display: block;
+  margin-left: 6px;
+  border-left: 22px solid #ffffff;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+}
+
+.dnpb-video-label {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #dddddd;
+}
+
+.dnpb-hero-intro {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.dnpb-price-callout {
+  margin: 28px 0 0;
+  color: #d00000;
+  text-align: center;
+  font-size: 43px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  line-height: 1;
+}
+
+
+/* ============================================================
+   16. VALUE STACK (Section 07)
+   ============================================================ */
+
+.dnpb-bundle-placeholder {
+  max-width: 680px;
+  min-height: 190px;
+  margin: 0 auto 28px;
+  background: #ffffff;
+  border: 2px dashed #c9c9c9;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #777777;
+  text-align: center;
+  padding: 24px;
+}
+
+.dnpb-bundle-placeholder strong {
+  color: #333333;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.dnpb-value-box {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 32px 28px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 18px 42px rgba(0,0,0,0.10);
+  text-align: center;
+}
+
+.dnpb-product-title {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 31px;
+  font-weight: 800;
+  color: #111111;
+  margin: 0 0 12px;
+}
+
+.dnpb-regular {
+  font-size: 20px;
+  color: #202020;
+  margin: 0 0 8px;
+}
+
+.dnpb-regular s {
+  color: #d00000;
+  font-weight: 900;
+}
+
+.dnpb-big-discount {
+  color: #d00000;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 10px 0 8px;
+}
+
+.dnpb-limited {
+  color: #555555;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.dnpb-bundle-image-card {
+  margin: 0 auto 28px;
+  max-width: 780px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 18px 42px rgba(0,0,0,0.10);
+  padding: 20px;
+  text-align: center;
+}
+
+.dnpb-bundle-image {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 0 auto 12px;
+}
+
+.dnpb-bundle-image-card strong {
+  display: block;
+  color: #111111;
+  font-size: 19px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.dnpb-bundle-image-card span {
+  display: block;
+  color: #777777;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   17. SECTION 08 — DARK BG SPECIFIC OVERRIDES
+   ============================================================ */
+
+.dnpb-section-08 .dnpb-check-list li { color: #ffffff; }
+.dnpb-section-08 .dnpb-check { color: #7ee8a2; }
+.dnpb-section-08 .dnpb-small-label { color: #ffdddd; }
+
+
+/* ============================================================
+   18. SECTION 09 — FINAL CLOSE STYLES
+   ============================================================ */
+
+.dnpb-final-copy {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.dnpb-final-copy p {
+  font-size: 18px;
+  color: #555555;
+}
+
+.dnpb-testimonials {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.dnpb-testimonial {
+  margin: 0 0 18px;
+  padding: 24px 28px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-left: 7px solid #d00000;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+}
+
+.dnpb-testimonial p {
+  margin: 0 0 12px;
+  color: #202020;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.dnpb-testimonial cite {
+  display: block;
+  color: #d00000;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.dnpb-signoff {
+  max-width: 720px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.dnpb-signoff p {
+  margin-bottom: 8px;
+  font-size: 19px;
+  color: #202020;
+}
+
+.dnpb-signoff .dnpb-name {
+  margin-top: 16px;
+  font-size: 34px;
+  color: #d00000;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+
+.dnpb-footer {
+  border-top: 1px solid #e5e5e5;
+  background: #f7f7f7;
+  color: #777777;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 22px 20px;
+  padding-bottom: calc(22px + env(safe-area-inset-bottom));
+}
+
+
+/* ============================================================
+   19. RESPONSIVE — TABLET (max-width: 760px)
+   ============================================================ */
+
+@media (max-width: 760px) {
+  .dnpb-section-pad {
+    padding-top: 40px;
+    padding-bottom: 44px;
+  }
+
+  .dnpb-section-02 h1, .dnpb-section-03 h1, .dnpb-section-04 h1,
+  .dnpb-section-05 h1, .dnpb-section-06 h1, .dnpb-section-07 h1,
+  .dnpb-section-08 h1, .dnpb-section-09 h1 {
+    font-size: 34px;
+  }
+
+  .dnpb-section-02 h2, .dnpb-section-03 h2, .dnpb-section-04 h2,
+  .dnpb-section-05 h2, .dnpb-section-06 h2, .dnpb-section-07 h2,
+  .dnpb-section-08 h2, .dnpb-section-09 h2 {
+    font-size: 29px;
+  }
+
+  .dnpb-section-02 h3, .dnpb-section-03 h3, .dnpb-section-04 h3,
+  .dnpb-section-05 h3, .dnpb-section-06 h3, .dnpb-section-07 h3,
+  .dnpb-section-08 h3, .dnpb-section-09 h3 {
+    font-size: 24px;
+  }
+
+  .dnpb-program {
+    flex-direction: column;
+    padding: 22px;
+    gap: 20px;
+  }
+
+  .dnpb-image-placeholder {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .dnpb-cta { font-size: 18px; }
+
+  .dnpb-red-bar { font-size: 23px; }
+
+  .dnpb-video-box { border-width: 6px; }
+
+  .dnpb-price-callout { font-size: 36px; }
+}
+
+
+/* ============================================================
+   20. RESPONSIVE — MOBILE (max-width: 480px)
+   ============================================================ */
+
+@media (max-width: 480px) {
+  .dnpb-wrap {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .dnpb-section-pad {
+    padding-top: 32px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .dnpb-section-02 h1, .dnpb-section-03 h1, .dnpb-section-04 h1,
+  .dnpb-section-05 h1, .dnpb-section-06 h1, .dnpb-section-07 h1,
+  .dnpb-section-08 h1, .dnpb-section-09 h1 {
+    font-size: clamp(26px, 7vw, 34px) !important;
+    line-height: 1.15 !important;
+  }
+
+  .dnpb-section-02 h2, .dnpb-section-03 h2, .dnpb-section-04 h2,
+  .dnpb-section-05 h2, .dnpb-section-06 h2, .dnpb-section-07 h2,
+  .dnpb-section-08 h2, .dnpb-section-09 h2 {
+    font-size: clamp(22px, 6vw, 29px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .dnpb-section-02 h3, .dnpb-section-03 h3, .dnpb-section-04 h3,
+  .dnpb-section-05 h3, .dnpb-section-06 h3, .dnpb-section-07 h3,
+  .dnpb-section-08 h3, .dnpb-section-09 h3 {
+    font-size: clamp(19px, 5.5vw, 24px) !important;
+    line-height: 1.25 !important;
+  }
+
+  .dnpb-lead { font-size: 16px !important; }
+
+  .dnpb-red-bar {
+    font-size: clamp(16px, 5vw, 21px) !important;
+    padding: 12px 16px !important;
+  }
+
+  .dnpb-urgency {
+    font-size: 14px !important;
+    padding: 11px 14px !important;
+  }
+
+  .dnpb-cta {
+    font-size: 17px !important;
+    padding: 15px 20px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .dnpb-program {
+    flex-direction: column !important;
+    padding: 18px !important;
+    gap: 16px !important;
+  }
+
+  .dnpb-image-placeholder {
+    width: 100% !important;
+    flex-basis: auto !important;
+    min-height: 140px !important;
+  }
+
+  .dnpb-price-callout {
+    font-size: clamp(28px, 8vw, 36px) !important;
+  }
+
+  .dnpb-big-discount {
+    font-size: clamp(22px, 7vw, 30px) !important;
+  }
+
+  .dnpb-testimonial {
+    padding: 18px 16px !important;
+  }
+
+  .dnpb-testimonial p {
+    font-size: 16px !important;
+  }
+
+  .dnpb-signoff .dnpb-name {
+    font-size: 28px !important;
+  }
+
+  .dnpb-value-box {
+    padding: 24px 16px !important;
+  }
+
+  .dnpb-product-title {
+    font-size: 24px !important;
+  }
+
+  .dnpb-check-list li {
+    font-size: 15px !important;
+  }
+}
